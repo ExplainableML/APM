@@ -1,0 +1,12 @@
+# @package _global_
+# Style-aware embedder + fine-tune the embedder jointly with projector + LoRA.
+# Embedder gets a smaller LR than the LoRA/projector.
+defaults:
+  - user_embedding
+  - _self_
+
+method_name: user_embedding_style_finetune
+personalization_system:
+  embedder_model: AnnaWegmann/Style-Embedding
+  train_embedder: true
+  embedder_lr: 5.0e-6   # 10× smaller than projector/LoRA lr

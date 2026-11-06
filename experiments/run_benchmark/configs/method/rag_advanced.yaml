@@ -1,0 +1,10 @@
+# @package _global_
+method_name: rag_advanced
+
+personalization_system:
+  _target_: llm_personalization.personalization_system.methods.rag_advanced.RAGAdvancedSystem
+  embedder_model: BAAI/bge-large-en-v1.5
+  top_k: 3
+  embedder_batch_size: 32
+  embedder_max_seq_length: 512
+  llm_helper_config: ${llm_helper}

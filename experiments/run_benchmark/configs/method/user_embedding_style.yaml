@@ -1,0 +1,9 @@
+# @package _global_
+# user_embedding (SimPO) using a style-aware embedder. Embedder stays frozen.
+defaults:
+  - user_embedding
+  - _self_
+
+method_name: user_embedding_style
+personalization_system:
+  embedder_model: AnnaWegmann/Style-Embedding

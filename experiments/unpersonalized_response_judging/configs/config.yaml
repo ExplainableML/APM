@@ -1,0 +1,14 @@
+defaults:
+  - judge: gpt-oss-120b
+  - attributes: natural_k10
+  - dataset: qwen3p5_27b_natural_k10_1attrs_test
+  - _self_
+
+# `input_path`, `pool_tag`, `gen_model_tag` come from dataset/*.
+# `judge_model_tag` is set by judge/*.
+output_dir: data/unpersonalized_response_judging/${gen_model_tag}_${judge_model_tag}/${pool_tag}_${split_name}
+
+array_task_id: ${oc.env:SLURM_ARRAY_TASK_ID,0}
+array_task_count: ${oc.env:SLURM_ARRAY_TASK_COUNT,1}
+
+limit: null

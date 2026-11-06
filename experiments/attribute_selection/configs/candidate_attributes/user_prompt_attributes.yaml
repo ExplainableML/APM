@@ -1,0 +1,99 @@
+# @package _global_
+candidate_attributes:
+  - frustrated
+  - enthusiastic
+  - desperate
+  - anxious
+  - polite
+  - demanding
+  - calm
+  - aggressive
+  - playful
+  - earnest
+  - precise
+  - vague
+  - rambling
+  - articulate
+  - disjointed
+  - tangential
+  - laser-focused
+  - domain-expert
+  - novice
+  - confused
+  - confident
+  - assumes shared context
+  - tech-savvy
+  - transactional
+  - conversational
+  - adversarial
+  - sycophantic
+  - collaborative
+  - commanding
+  - anthropomorphizing
+  - skeptical
+  - highly constrained
+  - open-ended
+  - prescriptive
+  - outcome-oriented
+  - rule-heavy
+  - flexible
+  - urgent
+  - patient
+  - impatient
+  - relaxed
+  - frantic
+  - high-context
+  - low-context
+  - self-referential
+  - hypothetical
+  - scenario-building
+  - drops user directly into a task
+  - exploratory
+  - fact-seeking
+  - troubleshooting
+  - brainstorming
+  - validation-seeking
+  - creative
+  - analytical
+  - formal
+  - colloquial
+  - professional
+  - casual
+  - slang-heavy
+  - sophisticated vocabulary
+  - simple language
+  - jargon-heavy
+  - typo-heavy
+  - unpolished
+  - meticulously edited
+  - opinionated
+  - open-minded
+  - argumentative
+  - stubborn
+  - receptive
+  - contrarian
+  - confessional
+  - guarded
+  - trusting
+  - suspicious
+  - defensive
+  - humorous
+  - sarcastic
+  - dry
+  - shitposting
+  - verbose
+  - terse
+  - heavy formatting
+  - minimal formatting
+  - uses code snippets
+  - bullet-heavy
+  - wall-of-text
+  - multi-step
+  - single-shot
+  - nuanced
+  - rudimentary
+  - morally opinionated
+  - politically charged
+  - neutral
+  - provocative
+  - boundary-testing

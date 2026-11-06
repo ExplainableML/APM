@@ -1,0 +1,16 @@
+# @package _global_
+judge_model_tag: gptoss
+
+judge:
+  _target_: llm_personalization.judge.parsed_rating_judge.ParsedRatingJudge
+  model: openai/gpt-oss-120b
+  tensor_parallel_size: 1
+  max_model_len: 32768
+  gpu_memory_utilization: 0.90
+  enable_thinking: true
+  vllm_kwargs:
+    max_num_batched_tokens: 1024
+  sampling_params:
+    max_tokens: 4096
+    temperature: 1.0
+    top_p: 0.95

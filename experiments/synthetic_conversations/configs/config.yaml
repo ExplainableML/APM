@@ -1,0 +1,18 @@
+defaults:
+  - llm: gpt-oss-120b
+  - attributes: user_prompt_attributes_natural_k10
+  - _self_
+
+# 4,000 train + 500 val + 1,000 test users; of the three conversations per
+# user, the first two supply history and the final one is the held-out prompt.
+num_train_users: 4500
+num_test_users: 1000
+num_conversations_per_user: 3
+num_attributes_per_user: 1
+seed: 42
+first_user_turn_only: true
+require_exact_user_counts: true
+
+pool_tag: natural_k10_1attrs_c3_4500_1000
+train_output_path: data/synthetic_conversations/gpt-oss-120b_${pool_tag}_train.jsonl
+test_output_path: data/synthetic_conversations/gpt-oss-120b_${pool_tag}_test.jsonl

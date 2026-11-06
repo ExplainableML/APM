@@ -1,0 +1,20 @@
+_target_: llm_personalization.judge.parsed_rating_judge.ParsedRatingJudge
+
+model: openai/gpt-oss-120b
+
+tensor_parallel_size: 1
+max_model_len: 32768
+# Memory tuning (TP=1, MXFP4 on H100 80GB): load-time OOM needs
+# `PYTORCH_ALLOC_CONF=expandable_segments:True` in the environment plus
+# `max_num_batched_tokens=1024`; GMU=0.90 (not 0.95) leaves sampler headroom
+# for long thinking traces.
+gpu_memory_utilization: 0.90
+enable_thinking: true
+
+vllm_kwargs:
+  max_num_batched_tokens: 1024
+
+sampling_params:
+  max_tokens: 4096
+  temperature: 1.0
+  top_p: 0.95

@@ -1,0 +1,11 @@
+# @package _global_
+gen_model_tag: llama31_8b
+
+llm:
+  _target_: llm_personalization.llm.llm_helper.LLMHelper
+  model: meta-llama/Llama-3.1-8B-Instruct
+  tensor_parallel_size: 1
+  max_model_len: 32768
+  gpu_memory_utilization: 0.90
+  sampling_params:
+    max_tokens: 2048

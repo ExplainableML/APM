@@ -1,0 +1,11 @@
+# @package _global_
+# Mirrors run_benchmark/configs/robustness/full.yaml. Must match exactly
+# at consumption time (the cache filename is derived from these flags).
+robustness:
+  include_mmlu_pro: true
+  include_truthfulqa: true
+  include_bbq: true
+  mmlu_pro_limit: null
+  truthfulqa_limit: null
+  bbq_limit: null
+  seed: 42

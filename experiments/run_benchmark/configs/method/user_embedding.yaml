@@ -1,0 +1,39 @@
+# @package _global_
+method_name: user_embedding
+
+personalization_system:
+  _target_: llm_personalization.personalization_system.methods.user_embedding.UserEmbeddingSystem
+  gen_model: ${llm_helper.model}
+  embedder_model: BAAI/bge-large-en-v1.5
+
+  # projector
+  projector_mlp_hidden: null   # null -> uses LLM hidden_size
+
+  # LoRA
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  lora_target_modules: [q_proj, k_proj, v_proj, o_proj]
+
+  # training
+  loss_type: simpo            # "simpo" | "dpo"
+  batch_size: 1
+  grad_accum_steps: 8
+  epochs: 1
+  lr: 5.0e-5
+  max_prompt_tokens: 1024
+  max_response_tokens: 1024
+  beta: 2.0                   # SimPO β (paper default 2.0)
+  gamma: 1.0                  # SimPO margin γ
+  dpo_beta: 0.1               # DPO β (paper default 0.1)
+  seed: 42
+  gradient_checkpointing: true
+
+  # inference
+  infer_batch_size: 4
+  max_new_tokens: 1024
+  infer_dtype: bfloat16
+
+  # embedder
+  embedder_batch_size: 32
+  embedder_max_seq_length: 512

@@ -1,0 +1,10 @@
+# @package _global_
+pool_tag: natural_k10_1attrs_c3_4500_1000
+
+inputs:
+  - path: data/attribute_responses/gpt-oss-120b_${pool_tag}_nemotron/train.jsonl
+    split_name: train
+  - path: data/attribute_responses/gpt-oss-120b_${pool_tag}_nemotron/test.jsonl
+    split_name: test
+
+output_dir: data/attribute_response_judging/gpt-oss-120b_${pool_tag}_nemotron_gptoss_judge

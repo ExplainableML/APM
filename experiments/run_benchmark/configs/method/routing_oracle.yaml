@@ -1,0 +1,7 @@
+# @package _global_
+method_name: routing_oracle
+
+personalization_system:
+  _target_: llm_personalization.personalization_system.methods.routing_oracle.RoutingOracleSystem
+  attributes: ${response_attributes}
+  llm_helper_config: ${llm_helper}

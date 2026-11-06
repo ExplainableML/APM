@@ -1,0 +1,9 @@
+# @package _global_
+robustness:
+  include_mmlu_pro: true
+  include_truthfulqa: true
+  include_bbq: false
+  mmlu_pro_limit: 200
+  truthfulqa_limit: 200
+  bbq_limit: 200
+  seed: 42

@@ -1,0 +1,6 @@
+# @package _global_
+method_name: unpersonalized
+
+personalization_system:
+  _target_: llm_personalization.personalization_system.methods.unpersonalized.UnpersonalizedSystem
+  llm_helper_config: ${llm_helper}

@@ -1,0 +1,22 @@
+# Core ML
+torch
+transformers
+datasets==4.6.1
+peft
+
+# Inference
+vllm>=0.18.0
+
+# Config management
+hydra-core
+omegaconf
+
+# Utilities
+pyyaml
+numpy
+pandas
+tqdm
+
+matplotlib
+umap-learn
+sentence-transformers

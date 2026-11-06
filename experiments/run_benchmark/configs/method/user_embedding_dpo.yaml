@@ -1,0 +1,10 @@
+# @package _global_
+# DPO variant of user_embedding. Uses the unchanged base LLM (LoRA-off, no
+# soft token in the prefix) as the reference. Two forwards per pair.
+defaults:
+  - user_embedding
+  - _self_
+
+method_name: user_embedding_dpo
+personalization_system:
+  loss_type: dpo

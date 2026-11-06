@@ -1,0 +1,15 @@
+defaults:
+  - llm: qwen3p5_27b
+  - dataset: natural_k10_1attrs_test
+  - _self_
+
+# `input_path`, `split_name`, `pool_tag` come from the dataset group.
+# `output_dir` is built from gen_model_tag (set in llm/*) + pool_tag (dataset/*).
+output_dir: data/unpersonalized_responses/${gen_model_tag}/${pool_tag}_${split_name}
+
+# Slurm-array slicing.
+array_task_id: ${oc.env:SLURM_ARRAY_TASK_ID,0}
+array_task_count: ${oc.env:SLURM_ARRAY_TASK_COUNT,1}
+
+input_limit: null
+limit: null

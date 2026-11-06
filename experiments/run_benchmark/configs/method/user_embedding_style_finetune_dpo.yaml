@@ -1,0 +1,12 @@
+# @package _global_
+# Style-aware embedder + fine-tune the embedder + DPO loss.
+defaults:
+  - user_embedding
+  - _self_
+
+method_name: user_embedding_style_finetune_dpo
+personalization_system:
+  embedder_model: AnnaWegmann/Style-Embedding
+  train_embedder: true
+  embedder_lr: 5.0e-6
+  loss_type: dpo

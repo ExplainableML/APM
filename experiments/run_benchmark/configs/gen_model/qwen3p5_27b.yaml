@@ -1,0 +1,10 @@
+# @package _global_
+gen_model_tag: qwen3p5_27b
+
+llm_helper:
+  model: Qwen/Qwen3.5-27B
+  tensor_parallel_size: 1
+  max_model_len: 32768
+  gpu_memory_utilization: 0.90
+  sampling_params:
+    max_tokens: 2048

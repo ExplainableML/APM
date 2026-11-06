@@ -1,0 +1,14 @@
+defaults:
+  - judge: gpt-oss-120b
+  - attributes: natural_k10
+  - dataset: natural_k10_1attrs
+  - _self_
+
+# `inputs`/`output_dir` come from dataset/*. The `attributes` group must match
+# the response attributes used to generate that dataset; avoid-side scores are
+# derived as `11 - score`.
+
+array_task_id: ${oc.env:SLURM_ARRAY_TASK_ID,0}
+array_task_count: ${oc.env:SLURM_ARRAY_TASK_COUNT,1}
+
+limit: null  # cap users after slicing (smoke tests)

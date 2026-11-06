@@ -1,0 +1,22 @@
+defaults:
+  - pool: natural_k10_1attrs
+  - gen_model: qwen3p5_27b
+  - judge_model: gptoss
+  - method: routing_abs
+  - _self_
+
+# Plain dict (no _target_) so the methods can **-unpack into LLMHelper.__init__.
+# Override via `gen_model=...`.
+# llm_helper: {...}   # set by gen_model group
+# attribute_judge: {...}  # set by judge_model group
+
+num_worlds: 1
+world_matrix_type: permutation
+world_matrix_k: 1
+# world_seeds: [0]   # explicit world seeds instead of range(num_worlds), e.g. one world per job
+
+skip_training: false
+save_test_results: true
+
+# Each run writes to <output_root>/<timestamp>_<gen_model>_<method>_<seeds>_<pool>/
+output_root: data/run_benchmark

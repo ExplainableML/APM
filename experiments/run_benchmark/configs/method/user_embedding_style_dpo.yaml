@@ -1,0 +1,10 @@
+# @package _global_
+# Style-aware embedder (frozen) + DPO loss.
+defaults:
+  - user_embedding
+  - _self_
+
+method_name: user_embedding_style_dpo
+personalization_system:
+  embedder_model: AnnaWegmann/Style-Embedding
+  loss_type: dpo

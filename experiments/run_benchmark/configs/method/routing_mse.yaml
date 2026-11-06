@@ -1,0 +1,19 @@
+# @package _global_
+method_name: routing_mse
+
+personalization_system:
+  _target_: llm_personalization.personalization_system.methods.routing.RoutingSystem
+  label_selection: mse
+  attributes: ${response_attributes}
+  text_classification_model_config:
+    pooling: mean
+    base_model: answerdotai/ModernBERT-base
+    max_length: 8192
+    dtype: float32
+  text_classification_model_train_kwargs:
+    batch_size: 4
+    grad_accum_steps: 4
+    epochs: 3
+    lr: 2e-5
+  llm_helper_config: ${llm_helper}
+  predict_batch_size: 32

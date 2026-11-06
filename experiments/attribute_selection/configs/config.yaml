@@ -1,0 +1,11 @@
+defaults:
+  - judge: local_gpt-oss-120b
+  - candidate_attributes: response_attributes
+  - _self_
+
+scores_path: data/attribute_selection/scores_gpt-oss-120b_10000.npy
+limit: 10000
+
+mode: response_attribute
+entropy_threshold: 1.5
+seed: 42  # parallel analysis

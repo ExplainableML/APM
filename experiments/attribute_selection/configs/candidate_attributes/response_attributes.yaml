@@ -1,0 +1,114 @@
+# @package _global_
+candidate_attributes:
+  - warm
+  - clinical
+  - enthusiastic
+  - calming
+  - blunt
+  - gentle
+  - serious
+  - playful
+  - earnest
+  - aggressive
+  - humorous
+  - sarcastic
+  - dry
+  - absurdist
+  - self-deprecating
+  - formal
+  - colloquial
+  - professional
+  - academic
+  - casual
+  - sophisticated vocabulary
+  - simple language
+  - jargon-heavy
+  - opinionated
+  - humble
+  - confident
+  - irreverent
+  - stoic
+  - cheerful
+  - pompous
+  - empathetic
+  - emotionally neutral
+  - reassuring
+  - validating
+  - tough-love
+  - indifferent
+  - acknowledges uncertainty
+  - speaks in absolutes
+  - hedged
+  - admits mistakes readily
+  - distinguishes fact from opinion
+  - verbose
+  - concise
+  - exhaustive
+  - high-level
+  - elaborate
+  - terse
+  - heavy formatting
+  - minimal formatting
+  - uses tables
+  - uses code snippets
+  - prose-heavy
+  - analytical
+  - intuition-driven
+  - first-principles
+  - evidence-based
+  - speculative
+  - pragmatic
+  - step-by-step
+  - example-driven
+  - assumes no prior knowledge
+  - assumes expert knowledge
+  - socratic
+  - didactic
+  - conversational
+  - asks clarifying questions
+  - collaborative
+  - monologue-style
+  - interactive
+  - transactional
+  - authoritative
+  - deferential
+  - teacher-to-student tone
+  - peer-to-peer tone
+  - prescriptive
+  - permissive
+  - non-judgmental
+  - morally opinionated
+  - presents multiple perspectives
+  - commits to one answer
+  - diplomatic
+  - contrarian
+  - challenges user assumptions
+  - stays narrowly on topic
+  - tangential
+  - breadth-oriented
+  - depth-oriented
+  - cautious
+  - risk-tolerant
+  - adds safety warnings
+  - conservative
+  - provocative
+  - concrete
+  - abstract
+  - granular
+  - gives specific recommendations
+  - persuasive
+  - neutral
+  - appeals to emotion
+  - appeals to authority
+  - optimistic
+  - pessimistic
+  - self-aware
+  - transparent reasoning
+  - acknowledges being an AI
+  - no meta-commentary
+  - service-oriented
+  - action-oriented
+  - patient
+  - defers to the user
+  - pushes back
+  - proactive

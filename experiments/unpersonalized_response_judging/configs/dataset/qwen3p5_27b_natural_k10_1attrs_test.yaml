@@ -1,0 +1,5 @@
+# @package _global_
+gen_model_tag: qwen3p5_27b
+pool_tag: natural_k10_1attrs_c3_4500_1000
+split_name: test
+input_path: data/unpersonalized_responses/${gen_model_tag}/${pool_tag}_${split_name}

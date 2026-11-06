@@ -1,0 +1,8 @@
+defaults:
+  - llm: qwen3p5_27b
+  - robustness: full
+  - _self_
+
+# `gen_model_tag` comes from `llm/*`. `robustness:` comes from `robustness/*`.
+
+force: false   # set to true to regenerate even if the cache file exists

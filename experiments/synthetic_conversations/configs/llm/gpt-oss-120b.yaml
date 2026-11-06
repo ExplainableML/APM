@@ -1,0 +1,11 @@
+_target_: llm_personalization.llm.llm_helper.LLMHelper
+
+model: openai/gpt-oss-120b
+
+tensor_parallel_size: 2
+max_model_len: 32768
+gpu_memory_utilization: 0.90
+enable_thinking: true
+
+sampling_params:
+  max_tokens: 8192

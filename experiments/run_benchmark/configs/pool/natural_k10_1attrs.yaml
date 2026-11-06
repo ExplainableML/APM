@@ -1,0 +1,43 @@
+# @package _global_
+
+user_attributes:
+  - concise
+  - formal
+  - structured
+  - polite
+  - emotionally expressive
+  - meticulous
+  - playful
+  - technical
+  - opinionated
+  - inquisitive
+
+response_attributes:
+  - concise
+  - formal
+  - structured
+  - warm
+  - lively
+  - technical
+  - cautious
+  - opinionated
+  - direct
+  - nuanced
+
+num_response_attributes_per_user: 1
+
+pool_tag: natural_k10_1attrs_c3_4500_1000
+
+cache:
+  conversations_train: data/synthetic_conversations/gpt-oss-120b_${pool_tag}_train.jsonl
+  conversations_test:  data/synthetic_conversations/gpt-oss-120b_${pool_tag}_test.jsonl
+  responses_train:     data/attribute_responses/gpt-oss-120b_${pool_tag}_nemotron/train.jsonl
+  responses_test:      data/attribute_responses/gpt-oss-120b_${pool_tag}_nemotron/test.jsonl
+  ratings_train:       data/attribute_response_judging/gpt-oss-120b_${pool_tag}_nemotron_gptoss_judge
+  ratings_test:        data/attribute_response_judging/gpt-oss-120b_${pool_tag}_nemotron_gptoss_judge
+  unpersonalized_responses_test: data/unpersonalized_responses/${gen_model_tag}/${pool_tag}_test
+  unpersonalized_ratings_test:   data/unpersonalized_response_judging/${gen_model_tag}_${judge_model_tag}/${pool_tag}_test
+  val_size: 500
+  history_max_len: 2
+  train_limit: 4500
+  test_limit: null

@@ -1,0 +1,26 @@
+defaults:
+  - llm: nemotron
+  - attributes: natural_k10
+  - _self_
+
+# Raw synthetic-conversations JSONL (one user per line, from
+# synthetic_conversations/scripts/generate_conversations.py).
+pool_tag: natural_k10_1attrs_c3_4500_1000
+split_name: train  # train | test
+input_path: data/synthetic_conversations/gpt-oss-120b_${pool_tag}_${split_name}.jsonl
+
+# Per-task files: <output_dir>/<split_name>_part<id>_of<count>.jsonl
+output_dir: data/attribute_responses/gpt-oss-120b_${pool_tag}_nemotron
+
+# Which side of every attribute to probe: both sides give 2*len(attributes)
+# responses per prompt.
+sides:
+  - follow
+  - avoid
+
+# Array slicing (CLI overrides win; non-array runs use 0/1).
+array_task_id: ${oc.env:SLURM_ARRAY_TASK_ID,0}
+array_task_count: ${oc.env:SLURM_ARRAY_TASK_COUNT,1}
+
+input_limit: null  # cap users before array slicing
+limit: null  # cap users after array slicing (smoke tests)
